@@ -3,7 +3,8 @@
     "newProfile1": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger/index.html"
+      "launchUrl": "swagger/index.html",
+      "applicationUrl": "http://localhost:9100"
     }
   }
 }

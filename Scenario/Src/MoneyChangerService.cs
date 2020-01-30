@@ -12,6 +12,7 @@ namespace MoneyChanger.Martin.Sun
     public interface IMoneyChangerService
     {
         JsonResult GetExchangeRate(string ExchangeCurrency);
+        JsonResult GetExchangeRates();
     }
     public class MoneyChangrerService : IMoneyChangerService
     {
@@ -35,6 +36,7 @@ namespace MoneyChanger.Martin.Sun
             {
                 if (currencyList.Where(x => x.Name == ExchangeCurrency).Any())
                 {
+                     result.Message = string.Format("Excahnge Rate {0} ",ExchangeCurrency);
                     result.Data = currencyList.Where(x => x.Name == ExchangeCurrency).First();
                     result.HttpStatusCode = StatusCodes.Status200OK;
                 }
@@ -56,6 +58,35 @@ namespace MoneyChanger.Martin.Sun
            
             return result;
         }
-       
+
+        public JsonResult GetExchangeRates()
+        {
+            JsonResult result = new JsonResult();
+            try
+            {
+                if (currencyList.Any())
+                {
+                    result.Message = string.Format("Excahnge Rate on: {0} ", DateTime.Now.ToShortTimeString());
+                    result.Data = currencyList;
+                    result.HttpStatusCode = StatusCodes.Status200OK;
+                }
+                else
+                {
+                    result.Message = "No Currecny in the System";
+                    result.HttpStatusCode = StatusCodes.Status404NotFound;
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                result.HttpStatusCode = StatusCodes.Status500InternalServerError;
+                result.Message = ex.Message;
+            }
+
+            return result;
+        }
     } 
 }

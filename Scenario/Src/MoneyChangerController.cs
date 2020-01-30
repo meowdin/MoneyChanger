@@ -9,7 +9,7 @@ using System.IO;
 namespace MoneyChanger.Martin.Sun
 {
   
-    [Route("api/MoneyChangrer")]
+    [Route("api/v1/MoneyChangrer")]
     [ApiController]
     public class MoneyChangrerController : Controller
     {      
@@ -26,14 +26,25 @@ namespace MoneyChanger.Martin.Sun
         /// </summary>       
         /// <returns>HTTP Response</returns>
         /// <remarks> </remarks>
-        [HttpGet("GetRates")]
+        [HttpGet("getrate")]
         public IActionResult GetRates(string ExchangeCurrency)
         {           
          
             var rate = _moneyChangerService.GetExchangeRate(ExchangeCurrency);
             return Ok(rate); 
         }
-        
-      
+        /// <summary>
+        /// dashboard
+        /// </summary>       
+        /// <returns>HTTP Response</returns>
+        /// <remarks> </remarks>
+        [HttpGet("dashboard")]
+        public IActionResult Dashboard()
+        {
+
+            var rate = _moneyChangerService.GetExchangeRate(ExchangeCurrency);
+            return Ok(rate);
+        }
+
     }
 }
