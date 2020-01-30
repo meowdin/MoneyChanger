@@ -6,7 +6,7 @@
     <UserSecretsId>d626ca94-65eb-45bd-be3f-0e7a34bc6780</UserSecretsId>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
-    <StartupObject>Coding.Challenge.Martin.Sun.Program</StartupObject>
+    <StartupObject>MoneyChangrer.Design.Martin.Sun.Program</StartupObject>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     <RootNamespace>MoneyChanger.Martin.Sun</RootNamespace>
     <AssemblyName>MoneyChanger.Martin.Sun</AssemblyName>
@@ -28,22 +28,6 @@
     <EmbeddedResource Remove="wwwroot\**" />
     <None Remove="Test\**" />
     <None Remove="wwwroot\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="appsettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>

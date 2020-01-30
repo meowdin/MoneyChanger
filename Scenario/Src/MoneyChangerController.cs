@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.IO;
 
 namespace MoneyChanger.Martin.Sun
 {
@@ -42,8 +37,8 @@ namespace MoneyChanger.Martin.Sun
         public IActionResult Dashboard()
         {
 
-            var rate = _moneyChangerService.GetExchangeRate(ExchangeCurrency);
-            return Ok(rate);
+            var rates = _moneyChangerService.GetExchangeRates();
+            return Ok(rates);
         }
 
     }

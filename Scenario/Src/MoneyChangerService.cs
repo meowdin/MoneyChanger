@@ -6,6 +6,7 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using MoneyChangrer.Martin.Sun.Models;
 using System.Xml.Serialization;
+using Microsoft.Extensions.Logging;
 
 namespace MoneyChanger.Martin.Sun
 {
@@ -16,16 +17,27 @@ namespace MoneyChanger.Martin.Sun
     }
     public class MoneyChangrerService : IMoneyChangerService
     {
+        private readonly ILogger<MoneyChangrerService> _logger;
         IConfiguration _configuration;
         public List<ExchangeCurrency> currencyList { get; set; }
-        public MoneyChangrerService(IConfiguration configuration)
+        public MoneyChangrerService(IConfiguration configuration, ILogger<MoneyChangrerService> logger)
         {
             _configuration = configuration;
-            var DBFile = _configuration["DBFileName"];
-            XmlSerializer ser = new XmlSerializer(typeof(List<ExchangeCurrency>));
-            using (FileStream stream = File.OpenRead(DBFile))
+            _logger = logger;
+            try
             {
-                currencyList = (List<ExchangeCurrency>)ser.Deserialize(stream);
+                var DBFile = _configuration["DBFileName"];
+                XmlSerializer ser = new XmlSerializer(typeof(List<ExchangeCurrency>));
+                currencyList = new List<ExchangeCurrency>();
+                using (FileStream stream = File.OpenRead(DBFile))
+                {
+                    currencyList = (List<ExchangeCurrency>)ser.Deserialize(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message+":"+ex.StackTrace);
+
             }
 
         }

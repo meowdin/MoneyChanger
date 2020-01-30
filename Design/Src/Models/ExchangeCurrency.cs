@@ -1,6 +1,6 @@
-﻿using MoneyChangrer.Martin.Sun.Interface;
+﻿using MoneyChangrer.Design.Martin.Sun.Interface;
 
-namespace MoneyChangrer.Martin.Sun.Models
+namespace MoneyChangrer.Design.Martin.Sun
 {
     public class ExchangeCurrency:Currency, ITradingCurrency
     {
@@ -19,7 +19,7 @@ namespace MoneyChangrer.Martin.Sun.Models
         {
             return exchangeRate;
         }
-        decimal getExchangedAmount(Currency targetCurrency)
+        public decimal getExchangedAmount(Currency targetCurrency)
         {
             return exchangeAmount;
         }

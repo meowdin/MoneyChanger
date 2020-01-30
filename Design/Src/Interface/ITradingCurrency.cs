@@ -1,6 +1,4 @@
-﻿using MoneyChangrer.Martin.Sun.Models;
-
-namespace MoneyChangrer.Martin.Sun.Interface
+﻿namespace MoneyChangrer.Design.Martin.Sun.Interface
 {
     public interface ITradingCurrency
     {

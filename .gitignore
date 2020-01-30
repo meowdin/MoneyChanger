@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Scenario/Src/Test/obj
+/Scenario/Src/Test/bin/Debug/netcoreapp2.2
+/Scenario/Src/bin/Debug/netcoreapp2.2
+/Scenario/Src/obj
+/Design/Src/obj
+/Design/Src/bin/Debug/netcoreapp2.2
+/.vs/MoneyChanger.Martin.Sun/v15/Server/sqlite3
+/Visual Studio 2017/Visualizers/attribcache140.bin

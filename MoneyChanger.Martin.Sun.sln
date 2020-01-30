@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Design.Martin.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Martin.Sun", "Scenario\Src\MoneyChanger.Martin.Sun.csproj", "{8737DAC3-3B7F-44DA-B73F-4F13B985A3DE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Martin.Sun.Test", "Scenario\Src\Test\MoneyChanger.Martin.Sun.Test.csproj", "{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8737DAC3-3B7F-44DA-B73F-4F13B985A3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8737DAC3-3B7F-44DA-B73F-4F13B985A3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8737DAC3-3B7F-44DA-B73F-4F13B985A3DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

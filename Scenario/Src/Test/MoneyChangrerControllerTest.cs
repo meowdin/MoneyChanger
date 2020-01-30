@@ -1,41 +1,37 @@
 using Moq;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
-namespace Coding.Challenge.Martin.Sun.Test
+namespace MoneyChanger.Martin.Sun.Test
 {
     [TestClass]
     public class MoneyChangrerControllerTest
     {
-        MoneyChangrerController _controller;
-        IConfiguration _configuration;
-        IDTLService _dTLService;
-         [TestInitialize]
+       
+        private Mock<IConfiguration> _configuration;
+        IMoneyChangerService _moneyChangerService;
+        private Mock<ILogger<MoneyChangrerService>> _logger;
+        [TestInitialize]
         public void Initialize()
         {
-            _configuration = Mock.Of<IConfiguration>();
-            _dTLService = new MoneyChangrerService(_configuration);
-               _controller = new MoneyChangrerController(_configuration,_dTLService);
+            _configuration = new Mock<IConfiguration>();
+            _logger = new Mock<ILogger<MoneyChangrerService>>();
+            _moneyChangerService = new MoneyChangrerService(_configuration.Object, _logger.Object);
+             
         }
         [TestMethod]
-        public void SyncOutlets_ShouldReturn404()
+        public void getrate_ShouldReturn404()
         {
-            IActionResult Result = _controller.ParseModel("FailedType",1);
-            Assert.IsInstanceOfType(Result, typeof(ObjectResult));
-            Assert.IsTrue(((ObjectResult)Result).Value.ToString().Contains("template does not exist!"));
-            Assert.IsTrue(((ObjectResult)Result).StatusCode == StatusCodes.Status404NotFound);
+            JsonResult Result = _moneyChangerService.GetExchangeRate("NOTEXIST");           
+            Assert.IsTrue(Result.HttpStatusCode == StatusCodes.Status404NotFound);
         }
         [TestMethod]
-        public void SyncOutlets_ShouldReturnNoObject()
+        public void getrates_ShouldReturn404()
         {
-            
-            IActionResult Result = _controller.ParseModel("Car", 3);
-            Assert.IsInstanceOfType(Result, typeof(ObjectResult));
-            Assert.IsTrue(((ObjectResult)Result).Value.ToString().Contains("not exist"));
-            Assert.IsTrue(((ObjectResult)Result).StatusCode == StatusCodes.Status404NotFound);
+            JsonResult Result = _moneyChangerService.GetExchangeRates();
+            Assert.IsTrue(Result.HttpStatusCode == StatusCodes.Status404NotFound);
         }
     }
 }

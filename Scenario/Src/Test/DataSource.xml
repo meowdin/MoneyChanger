@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfExchangeCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ExchangeCurrency>
+  <ID>0</ID>
+  <Name>USDSGD</Name>
+    <ExchangeRate>1.364527</ExchangeRate>
+    <DecimalDigit>2</DecimalDigit>
+  </ExchangeCurrency>
+  <ExchangeCurrency>
+    <ID>1</ID>
+    <Name>SGDUSD</Name>
+    <ExchangeRate>0.7245661</ExchangeRate>
+    <DecimalDigit>2</DecimalDigit>
+  </ExchangeCurrency>
+  <ExchangeCurrency>
+    <ID>1</ID>
+    <Name>SGDJPY</Name>
+    <ExchangeRate>0.01133564</ExchangeRate>
+    <DecimalDigit>6</DecimalDigit>
+  </ExchangeCurrency>
+</ArrayOfExchangeCurrency>

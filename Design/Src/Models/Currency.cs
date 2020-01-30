@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MoneyChangrer.Martin.Sun.Models
+﻿
+namespace MoneyChangrer.Design.Martin.Sun
 {
     public abstract class Currency
     {

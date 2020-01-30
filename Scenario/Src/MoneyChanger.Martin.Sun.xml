@@ -18,5 +18,12 @@
             <returns>HTTP Response</returns>
             <remarks> </remarks>
         </member>
+        <member name="M:MoneyChanger.Martin.Sun.MoneyChangrerController.Dashboard">
+            <summary>
+            dashboard
+            </summary>       
+            <returns>HTTP Response</returns>
+            <remarks> </remarks>
+        </member>
     </members>
 </doc>

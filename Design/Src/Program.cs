@@ -1,19 +1,11 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-
-
-namespace Coding.Challenge.Martin.Sun
+﻿namespace MoneyChangrer.Design.Martin.Sun
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            //This project only demonstrate the class structiure specified on the test
+
         }
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)            
-             .UseStartup<Startup>()
-            .UseDefaultServiceProvider(options =>
-                   options.ValidateScopes = false);
     }
 }
