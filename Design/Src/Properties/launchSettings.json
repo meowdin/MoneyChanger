@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Coding.Challenge.Martin.Sun": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/DTL/readme",
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

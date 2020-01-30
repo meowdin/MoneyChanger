@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoneyChanger.Martin.Sun</name>
+    </assembly>
+    <members>
+        <member name="M:MoneyChanger.Martin.Sun.MoneyChangrerController.GetRates(System.String)">
+            <summary>
+            search for the reate in DB and return the result
+            </summary>       
+            <returns>HTTP Response</returns>
+            <remarks> </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "newProfile1": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger/index.html"
+    }
+  }
+}
