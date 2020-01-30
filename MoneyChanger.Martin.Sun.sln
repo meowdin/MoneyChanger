@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Martin.Sun", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Martin.Sun.Test", "Scenario\Src\Test\MoneyChanger.Martin.Sun.Test.csproj", "{8DE55BE6-D857-41E3-AAFE-CB2EDDE23FAE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E0F1C13-EC17-4964-A88F-3F5772983B5E}"
+	ProjectSection(SolutionItems) = preProject
+		Design\DesignReadMe.docx = Design\DesignReadMe.docx
+		Scenario\ScenarioReadMe.docx = Scenario\ScenarioReadMe.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
